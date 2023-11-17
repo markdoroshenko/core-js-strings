@@ -497,12 +497,12 @@ function extractEmails(str) {
  *
  */
 function encodeToRot13(str) {
-  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
   const rot13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
   let res = '';
   for (let i = 0; i < str.length; i += 1) {
-    const ind = alphabet.indexOf(str[i]);
-    if (alphabet.includes(str[i])) {
+    const ind = alpha.indexOf(str[i]);
+    if (alpha.includes(str[i])) {
       res += rot13[ind];
     } else {
       res += str[i];
